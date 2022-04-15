@@ -82,17 +82,25 @@ class _TextAnswerViewState extends State<TextAnswerView> {
             ),
           ),
           Container(
+            padding: EdgeInsets.symmetric(horizontal: 5),
             width: MediaQuery.of(context).size.width,
-            height: 50.0,
+            // height: 50.0,
             child: TextField(
               decoration: textFieldInputDecoration(
-                hint: _textAnswerFormat.hint,
+                hintText: _textAnswerFormat.hint,
+                enabledBorder: const InputDecoration(
+                  borderSide: const BorderSide(color: Colors.grey, width: 0.0),
+                ),
               ),
               controller: _controller,
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               onChanged: (String text) {
                 _checkValidation(text);
               },
+              textInputAction: TextInputAction.newline,
+              keyboardType: TextInputType.multiline,
+              minLines: 5,
+              maxLines: 10,
             ),
           ),
         ],
