@@ -72,25 +72,25 @@ class _TextAnswerViewState extends State<TextAnswerView> {
       isValid: _isValid || widget.questionStep.isOptional,
       child: Column(
         children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(bottom: 32.0, left: 14.0, right: 14.0),
-            child: Text(
-              widget.questionStep.text,
-              style: Theme.of(context).textTheme.bodyText2,
-              textAlign: TextAlign.center,
-            ),
-          ),
+          // Padding(
+          //   padding:
+          //       const EdgeInsets.only(bottom: 32.0, left: 14.0, right: 14.0),
+          //   child: Text(
+          //     widget.questionStep.text,
+          //     style: Theme.of(context).textTheme.bodyText2,
+          //     textAlign: TextAlign.center,
+          //   ),
+          // ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 5),
+            padding: EdgeInsets.symmetric(horizontal: 8),
             width: MediaQuery.of(context).size.width,
-            // height: 50.0,
             child: TextField(
               decoration: InputDecoration(
                 hintText: _textAnswerFormat.hint,
-                enabledBorder: const OutlineInputBorder(
+                border: const OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.grey, width: 0.0),
                 ),
+                contentPadding: EdgeInsets.all(5)
               ),
               controller: _controller,
               textAlign: TextAlign.left,
@@ -99,8 +99,8 @@ class _TextAnswerViewState extends State<TextAnswerView> {
               },
               textInputAction: TextInputAction.newline,
               keyboardType: TextInputType.multiline,
-              minLines: 5,
-              maxLines: 10,
+              minLines: 4,
+              maxLines: 4,
             ),
           ),
         ],
