@@ -86,7 +86,7 @@ class _TextAnswerViewState extends State<TextAnswerView> {
             width: MediaQuery.of(context).size.width,
             // height: 50.0,
             child: TextField(
-              decoration: textFieldInputDecoration(
+              decoration: InputDecoration(
                 hintText: _textAnswerFormat.hint,
                 enabledBorder: const InputDecoration(
                   borderSide: const BorderSide(color: Colors.grey, width: 0.0),
