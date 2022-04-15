@@ -88,7 +88,7 @@ class _TextAnswerViewState extends State<TextAnswerView> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: _textAnswerFormat.hint,
-                enabledBorder: const InputDecoration(
+                enabledBorder: const OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.grey, width: 0.0),
                 ),
               ),
