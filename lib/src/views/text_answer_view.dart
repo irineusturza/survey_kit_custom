@@ -92,6 +92,9 @@ class _TextAnswerViewState extends State<TextAnswerView> {
                 ),
                 contentPadding: EdgeInsets.all(5)
               ),
+              style: TextStyle(
+                backgroundColor: Colors.white,
+              ),
               controller: _controller,
               textAlign: TextAlign.left,
               onChanged: (String text) {
