@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:survey_kit/survey_kit.dart';
+import 'package:surveykit_example/widget-loader.dart';
 
 void main() {
   runApp(MyApp());
@@ -148,7 +149,8 @@ class _MyAppState extends State<MyApp> {
                     ),
                   );
                 }
-                return CircularProgressIndicator.adaptive();
+                // return CircularProgressIndicator.adaptive();
+                return Container(color: Colors.white, child: const WidgetLoader());
               },
             ),
           ),
